@@ -3,8 +3,8 @@ set -euxo pipefail
 
 # sudo apt install git-filter-repo
 
+rm -rf patches chromium
 git clone https://chromium.googlesource.com/chromium/src.git chromium
-rm -rf patches
 
 pushd chromium
     git filter-repo \
