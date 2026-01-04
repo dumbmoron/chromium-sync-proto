@@ -79,5 +79,5 @@ while read -r path; do
 done < <(find patches/ -type f | sort -n)
 
 echo "$already_applied" > .applied-pos
-git add .applied-pos
-git commit -m 'chore: update .applied-pos'
+git add .applied-pos || :
+git commit -m 'chore: update .applied-pos' || :

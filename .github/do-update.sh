@@ -20,4 +20,4 @@ git config --local user.name "github-actions[bot]"
 
 ./update.sh
 
-git push
+git push || :
