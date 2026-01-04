@@ -6,7 +6,13 @@ sudo rm -rf /usr/local/lib/android \
             /usr/lib/jvm \
             /usr/lib/google-cloud-sdk \
             /usr/lib/dotnet \
-            /usr/share/swift &
+            /usr/lib/firefox \
+            /opt/az \
+            /opt/ghc \
+            /opt/google \
+            /opt/hostedtoolcache \
+            /opt/microsoft \
+            /usr/share
 
 sudo apt-get -y install git-filter-repo
 git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
