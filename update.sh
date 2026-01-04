@@ -59,7 +59,7 @@ get_num_from_cr_commit_pos() {
     return 1
 }
 
-while read path; do
+while read -r path; do
     file_name="$(basename "$path")"
     patch_num=x
 
@@ -70,10 +70,10 @@ while read path; do
             git am --committer-date-is-author-date "$path"
             already_applied="$patch_num"
         else
-            echo "skipping $path as it was already applied" >&2
+            echo "skipping $file_name as it was already applied" >&2
         fi
     else
-        echo "fail: cannot get commit pos for $path" >&2
+        echo "fail: cannot get commit pos for $file_name" >&2
         exit 1
     fi
 done < <(find patches/ -type f | sort -n)
