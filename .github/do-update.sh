@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euxo pipefail
 
+sudo apt-get -y install git-filter-repo
 sudo rm -rf /usr/local/lib/android \
             /usr/local/.ghcup \
             /usr/lib/jvm \
@@ -14,7 +15,6 @@ sudo rm -rf /usr/local/lib/android \
             /opt/microsoft \
             /usr/share
 
-sudo apt-get -y install git-filter-repo
 git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
 git config --local user.name "github-actions[bot]"
 
